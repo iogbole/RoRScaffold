@@ -69,6 +69,6 @@ class JedisController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def jedi_params
-      params.require(:jedi).permit(:first_name, :last_name, :sex, :location)
+      params.require(:jedi).permit(:first_name, :last_name, :sex, :location, :picture)
     end
 end

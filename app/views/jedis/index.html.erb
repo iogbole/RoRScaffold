@@ -1,4 +1,4 @@
-<h1>Listing jedis</h1>
+  <h1>Listing jedis</h1>
 
 <table>
   <thead>
@@ -18,8 +18,9 @@
         <td><%= jedi.last_name %></td>
         <td><%= jedi.sex %></td>
         <td><%= jedi.location %></td>
-        <td><%= link_to 'Show', jedi %></td>
-        <td><%= link_to 'Edit', edit_jedi_path(jedi) %></td>
+         <td><%= jedi.picture %></td>
+        <td><%= link_to 'Show', jedi %> | </td>
+        <td><%= link_to 'Edit', edit_jedi_path(jedi) %> | </td>
         <td><%= link_to 'Destroy', jedi, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
