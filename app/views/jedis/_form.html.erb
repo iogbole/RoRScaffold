@@ -1,4 +1,5 @@
-<%= form_for(@jedi) do |f| %>
+<%#= form_for(@jedi) do |f| %>
+<%= form_for @jedi, :html => {:multipart => true} do |f| %>
   <% if @jedi.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@jedi.errors.count, "error") %> prohibited this jedi from being saved:</h2>
@@ -36,7 +37,7 @@
 
    <div class="field">
     <%= f.label :picture %><br>
-    <%= f.text_area :picture %>
+    <%= f.file_field :picture%>
   </div>
   <div class="actions">
     <%= f.submit %>
