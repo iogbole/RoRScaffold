@@ -22,7 +22,8 @@
 
 <p>
   <strong>Picture:</strong>
-  <%= @jedi.picture %>
+  <%#= @jedi.picture %>
+  <%= image_tag(@jedi.picture_url, :width => 600) if @jedi.picture.present? %>
 </p>
 
 <%= link_to 'Edit', edit_jedi_path(@jedi) %> |
