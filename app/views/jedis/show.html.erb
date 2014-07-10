@@ -17,15 +17,18 @@
 </p>
 
 <p>
-  <strong>Location:</strong>
+  <strong>Adress:</strong>
   <%= @jedi.location %>
 </p>
 
+<p></p>
 <p>
   <strong>Picture:</strong>
   <%#= @jedi.picture %>
   <%= image_tag(@jedi.picture_url, :width => 400) if @jedi.picture.present? %>
 </p>
+
+<p></p>
 
 <%= link_to 'Edit', edit_jedi_path(@jedi) %> |
 <%= link_to 'Back', jedis_path %>
