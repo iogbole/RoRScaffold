@@ -39,7 +39,7 @@
     <span>
      <!-- <input id="element_2_2" name= "element_2_2" class="element text" maxlength="255" size="25" value=""/> -->
 
-       <%= f.text_field :last_name , :id => "element_2_2", :class => "element text", :maxlength =>"255" :size =>"25" %>
+       <%= f.text_field :last_name , :id => "element_2_2", :class => "element text", :input_html => {:size => 20, :maxlength => 255} %>
       <label>Last</label>
     </span><p class="guidelines" id="guide_2"><small>First name and last name</small></p> 
     </li>
