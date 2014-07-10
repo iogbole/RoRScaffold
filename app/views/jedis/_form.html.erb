@@ -2,14 +2,14 @@
   
 <!--<img id="top" src="top.png" alt=""> -->
 
-  <div id="form_container">
   
-    <h1><a>Create Jedi</a></h1>
+  
+   
 
 <%= form_for @jedi, :html => {:multipart => true} , :id => 'form_871710', :class => 'appnitro' do |f| %>
 
   <div class="form_description">
-      <h2>Create Jedi</h2>
+     
       <p>Never trust a jedi</p>
     </div>      
 
@@ -31,7 +31,9 @@
     <label class="description" for="element_2">Name </label>
     <span>
       <!--<input id="element_2_1" name= "element_2_1" class="element text" maxlength="255" size="20" value=""/> -->
-      <%= f.text_field :first_name , :id => "element_2_1", :class => "element text", :maxlength =>"255" :size =>"20" %>
+      <%= f.text_field :first_name , :id => "element_2_1", :class => "element text", :input_html => {:size => 20, :maxlength => 255} %>
+
+
       <label>First</label>
     </span>
     <span>
@@ -55,7 +57,6 @@
 
     </span> 
     </li>   
-
 
 
 <li id="li_1" >
@@ -304,4 +305,5 @@
     <%= f.submit %>
   </div>
 <% end %>
+
 
