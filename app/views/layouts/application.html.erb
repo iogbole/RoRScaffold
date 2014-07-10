@@ -3,14 +3,16 @@
 <head>
   <title>My First RoR App</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <link rel="stylesheet" href="//railsgirls.com/assets/bootstrap.css" />
-  <link rel="stylesheet" href="//railsgirls.com/assets/bootstrap-theme.css" />
+  <%= stylesheet_link_tag "view" %>
+
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'view', 'data-turbolinks-track' => true %>
+
   <%= csrf_meta_tags %>
 </head>
-<body>
-
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+<body id="main_body">
+<%=image_tag("top.png", :id => 'top'%>
+<!-- <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -28,11 +30,17 @@
     </div>
   </div>
 </nav>
+-->
 
 
-<div class="container">
   <%= yield %>
-</div>
+
+<div id="footer">
+
+    </div>
+  </div>
+  <!--<img id="bottom" src="bottom.png" alt=""> -->
+  <%=image_tag("bottom.png", :id => 'bottom'%>
 
 </body>
 </html>
