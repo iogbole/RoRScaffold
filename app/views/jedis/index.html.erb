@@ -19,7 +19,7 @@
 
   <tbody>
     <% @jedis.each do |jedi| %>
-      <tr>
+      <tr class="<%= cycle('', 'alt') -%>" >
         <td><%= jedi.first_name %></td>
         <td><%= jedi.last_name %></td>
         <td><%= jedi.sex %></td>
