@@ -59,13 +59,17 @@
     <label class="description" for="element_1">Address </label>
     
     <div>
-      <input id="element_1_1" name="street_address" class="element text large" value="" type="text">
+    <!--  <input id="element_1_1" name="street_address" class="element text large" value="" type="text"> -->
+      <%= f.text_field :street_address , :id => "element_1_1", :class => "element text large" %>
+
 
       <label for="element_1_1">Street Address</label>
     </div>
   
     <div>
-      <input id="element_1_2" name="street_address_2" class="element text large" value="" type="text">
+      <!-- <input id="element_1_2" name="street_address_2" class="element text large" value="" type="text">  -->
+  <%= f.text_field :street_address_2 , :id => "element_1_2", :class => "element text large" %>
+
       <label for="element_1_2">Address Line 2</label>
     </div>
   
@@ -296,8 +300,8 @@
     </div>  
     </li>
 
-
-  <div class="subbutton">
+  
+  <div class="buttons">
     <%= f.submit %>
   </div>
 <% end %>
