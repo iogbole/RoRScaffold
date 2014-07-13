@@ -25,7 +25,6 @@ class JedisController < ApplicationController
   # POST /jedis.json
   def create
     @jedi = Jedi.new(jedi_params)
-    @jedi.set_location(params['street_address'],params['street_address_2'])
 
     respond_to do |format|
       if @jedi.save
@@ -70,6 +69,6 @@ class JedisController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def jedi_params
-      params.require(:jedi).permit(:first_name, :last_name, :sex, :picture, :street_address, :street_address_2)
+      params.require(:jedi).permit(:first_name, :last_name, :sex, :location, :picture)
     end
 end
